@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/text_reward_add"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="在这里输入福利内容"
+        android:inputType="textShortMessage"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_add_reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="添加" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reward_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorRVBG"
+
+        />
+</LinearLayout>

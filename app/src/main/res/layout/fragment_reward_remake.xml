@@ -4,53 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FirstFragment">
+    tools:context=".fragment.RewardRemakeFragment">
 
 
     <Button
-        android:id="@+id/btn_idols"
+        android:id="@+id/button_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_governor"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_captain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:text="偶像们"
+        android:text="舰长"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_fans"
+        android:id="@+id/btn_admiral"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="粉丝们"
+        android:layout_marginTop="68dp"
+        android:text="提督"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_idols" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_captain" />
 
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_governor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="新增一笔债务"
+        android:layout_marginTop="68dp"
+        android:text="总督"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_fans" />
-
-    <Button
-        android:id="@+id/btn_remake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="大航海福利修改"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add"
-        app:layout_constraintVertical_bias="0.086" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btn_admiral" />
 </androidx.constraintlayout.widget.ConstraintLayout>
