@@ -20,15 +20,25 @@ class ReWardRemakeActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    lateinit var title: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reward_remake)
+        //提取传参
+        title = intent.getStringExtra(ReWardRemakeActivity.TITLE)
+
         val rewardRv = findViewById<RecyclerView>(R.id.reward_rv)
         rewardRv?.layoutManager = LinearLayoutManager(this)
         rewardRv?.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        rewardRv?.adapter = RewardListAdapter(this)
-        btn_add_reward.setOnClickListener(this)
+        val rewardListAdapter = RewardListAdapter(this, title)
+        rewardRv?.adapter = rewardListAdapter
 
+        btn_add_reward.setOnClickListener(this)
+        btn_add_reward.setText("添加  ${getNameFromTitle(title)}  福利")
+
+        //刷新显示
+        rewardListAdapter.refreashList()
     }
 
     override fun onClick(view: View?) {
@@ -38,10 +48,20 @@ class ReWardRemakeActivity : AppCompatActivity(), View.OnClickListener {
                 val trim = text_reward_add.text.trim().toString()
                 text_reward_add.setText("")
                 if (!TextUtils.isEmpty(trim)) {
-                    adapter.addReward(trim)
+                    adapter.addReward(trim, title)
                 }
 
             }
+        }
+
+    }
+
+    fun getNameFromTitle(title: String): String {
+        when (title) {
+            ReWardRemakeActivity.CAPTAIN -> return "舰长"
+            ReWardRemakeActivity.ADMIRAL -> return "提督"
+            ReWardRemakeActivity.GOVORNOR -> return "总督"
+            else -> return "舰长"
         }
 
     }

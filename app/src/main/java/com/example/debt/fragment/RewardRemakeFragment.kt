@@ -10,6 +10,7 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.debt.R
 import com.example.debt.activity.ReWardRemakeActivity
+import kotlinx.android.synthetic.main.fragment_reward_remake.*
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -33,6 +34,8 @@ class RewardRemakeFragment : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.btn_captain).setOnClickListener { view ->
             onClick(view)
         }
+        btn_admiral.setOnClickListener(this)
+        btn_governor.setOnClickListener(this)
 
     }
 
@@ -48,11 +51,12 @@ class RewardRemakeFragment : Fragment(), View.OnClickListener {
             else -> title =
                 ReWardRemakeActivity.CAPTAIN
         }
-        var intent: Intent = Intent(context,
-            ReWardRemakeActivity::class.java)
-        var bundle: Bundle = Bundle();
-        bundle.putString(ReWardRemakeActivity.TITLE, title)
-        context?.startActivity(intent, bundle)
+        var intent: Intent = Intent(
+            context,
+            ReWardRemakeActivity::class.java
+        )
+        intent.putExtra(ReWardRemakeActivity.TITLE, title)
+        context?.startActivity(intent)
 
     }
 }
