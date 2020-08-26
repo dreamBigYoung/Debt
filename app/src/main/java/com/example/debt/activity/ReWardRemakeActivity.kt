@@ -16,7 +16,7 @@ class ReWardRemakeActivity : AppCompatActivity(), View.OnClickListener {
         val TITLE: String = "TITLE"
         val CAPTAIN: String = "CAPTAIN"
         val ADMIRAL: String = "ADMIRAL"
-        val GOVORNOR: String = "GOVPRNOR"
+        val GOVORNOR: String = "GOVORNOR"
 
     }
 

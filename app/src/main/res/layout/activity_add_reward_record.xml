@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/memberName"
+        style="@style/reward_record_item"
+        android:hint="成员名" />
+
+    <EditText
+        android:id="@+id/fanName"
+        style="@style/reward_record_item"
+        android:hint="粉丝名" />
+
+    <EditText
+        android:id="@+id/phone"
+        style="@style/reward_record_item"
+        android:hint="手机号"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/idCard"
+        style="@style/reward_record_item"
+        android:hint="身份证"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/record_date"
+        style="@style/reward_record_item"
+        android:hint="日期" />
+
+    <RadioGroup
+        android:id="@+id/reward_level_group"
+        style="@style/reward_record_item"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_captain"
+            style="@style/reward_btn"
+            android:checked="true"
+            android:text="舰长" />
+
+        <RadioButton
+            android:id="@+id/rb_admiral"
+            style="@style/reward_btn"
+            android:text="提督" />
+
+        <RadioButton
+            android:id="@+id/rb_govornor"
+            style="@style/reward_btn"
+            android:text="总督" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="left"
+        android:hint="备注"
+        android:maxLength="300" />
+
+    <Button
+        android:id="@+id/add_record"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="添加记录" />
+
+</LinearLayout>
